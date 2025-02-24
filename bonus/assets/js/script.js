@@ -3,37 +3,37 @@ const teamMembers = [
     name: "Marco Bianchi",
     role: "Designer",
     email: "marcobianchi@team.com",
-    img: "img/male1.png"
+    img: "./assets/img/male1.png"
   },
   {
     name: "Laura Rossi",
     role: "Front-end Developer",
     email: "laurarossi@team.com",
-    img: "img/female1.png"
+    img: "./assets/img/female1.png"
   },
   {
     name: "Giorgio Verdi",
     role: "Back-end Developer",
     email: "giorgioverdi@team.com",
-    img: "img/male2.png"
+    img: "./assets/img/male2.png"
   },
   {
     name: "Marta Ipsum",
     role: "SEO Specialist",
     email: "martarossi@team.com",
-    img: "img/female2.png"
+    img: "./assets/img/female2.png"
   },
   {
     name: "Roberto Lorem",
     role: "SEO Specialist",
     email: "robertolorem@team.com",
-    img: "img/male3.png"
+    img: "./assets/img/male3.png"
   },
   {
     name: "Daniela Amet",
     role: "Analyst",
     email: "danielaamet@team.com",
-    img: "img/female3.png"
+    img: "./assets/img/female3.png"
   }
 ];
 
@@ -61,8 +61,8 @@ function getMembersCard(membersObj) {
   const markup = `
           <div class="col-4">
           <div class="row">
-            <div class="col-4 g-0">
-              <img width="100%" src="./assets/${img}" alt="">
+            <div class="col-4  g-0">
+              <img width="100%" src="${img}" alt="">
             </div>
             <div class="col-8  bg-black d-flex flex-column justify-content-center ">
               <h4>${name}</h4>
@@ -99,3 +99,29 @@ function renderMemberCards (arr,domEl){
 // invoke function
 
 const renderTeam = renderMemberCards(teamMembers, cardEl)
+
+// Form
+// select form node by id
+const formEl = document.getElementById("new-member")
+// add event listner
+formEl.addEventListener('submit', (e) =>{
+  //prevent default
+  e.preventDefault()
+  
+  // select dom element
+  const name = document.getElementById('name').value
+  const role = document.getElementById('role').value
+  const email = document.getElementById('mail').value
+  const img = document.getElementById('image').value
+
+  const member = {
+    name,
+    role,
+    email,
+    img,
+  }
+
+  const markup = getMembersCard(member)
+
+  cardEl.innerHTML += markup
+})
