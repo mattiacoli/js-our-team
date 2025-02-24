@@ -48,6 +48,11 @@ const cardEl = document.getElementById('card-section')
 // Functions
 
 //function to get value from objects array and put in markup
+/**
+ * Generates an HTML markup string for a team member card.
+ * @param {object} membersObj -The team member object.
+ * @returns {string} - The generated HTML string for the team member card.
+ */
 function getMembersCard(membersObj) {
   // select key from object
   const {name, role, email, img} = membersObj
@@ -73,6 +78,11 @@ function getMembersCard(membersObj) {
 
 
 // function to automatize markup function for all members
+/**
+ * Renders multiple team member cards inside a given DOM element.
+ * @param {Object[]} arr - An array of team member objects.
+ * @param {HTMLElement} domEl - The DOM element where the cards will be rendered.
+ */
 function renderMemberCards (arr,domEl){
   for (let i = 0; i < arr.length; i++) {
     const element = arr[i];
