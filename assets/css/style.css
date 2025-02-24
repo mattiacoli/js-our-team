@@ -11,3 +11,27 @@
  --ot-primary: #e53170;
  --ot-accent: #6ac9ec;
 }
+
+.jumbotron{
+  h1{
+    color: var(--ot-primary);    
+  }
+
+  p{
+    font-weight: 500;
+  }
+
+}
+
+section{
+  .col-8{
+    padding-top: 0.5rem;
+    color: white;
+    line-height: 1rem;
+    vertical-align: baseline;
+
+    a{
+      color: var(--ot-accent);
+    }
+  }
+}

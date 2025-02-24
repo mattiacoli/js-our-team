@@ -49,19 +49,20 @@ const cardEl = document.getElementById('card-section')
 
 //function to get value from objects array and put in markup
 function getMembersCard(membersObj) {
-
+  // select key from object
   const {name, role, email, img} = membersObj
-
+ 
+  // get markup elements
   const markup = `
           <div class="col-4">
           <div class="row">
             <div class="col-4 g-0">
               <img width="100%" src="./assets/${img}" alt="">
             </div>
-            <div class="col-8 d-flex flex-column justify-content-between">
+            <div class="col-8  bg-black d-flex flex-column justify-content-center ">
               <h4>${name}</h4>
               <p>${role}</p>
-              <a href="">${email}</a>
+              <a href="" class="text-decoration-none">${email}</a>
             </div>
           </div>
         </div>
