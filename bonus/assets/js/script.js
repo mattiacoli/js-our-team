@@ -59,9 +59,9 @@ function getMembersCard(membersObj) {
  
   // get markup elements
   const markup = `
-          <div class="col-4">
+          <div class="col-lg-4 col-md-6 col-sm-12">
           <div class="row">
-            <div class="col-4  g-0">
+            <div class="col-4 g-0">
               <img width="100%" src="${img}" alt="">
             </div>
             <div class="col-8  bg-black d-flex flex-column justify-content-center ">
@@ -114,14 +114,17 @@ formEl.addEventListener('submit', (e) =>{
   const email = document.getElementById('mail').value
   const img = document.getElementById('image').value
 
+  // create an object litteral shortcut (ES6)
   const member = {
     name,
     role,
     email,
     img,
   }
-
+  // callback function to get cards
   const markup = getMembersCard(member)
-
+ 
+  // add card in selected dom node
   cardEl.innerHTML += markup
+
 })
