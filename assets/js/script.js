@@ -36,3 +36,55 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+
+console.log(teamMembers);
+
+
+// select dom element
+
+const cardEl = document.getElementById('card-section')
+
+// Functions
+
+//function to get value from objects array and put in markup
+function getMembersCard(membersObj) {
+
+  const {name, role, email, img} = membersObj
+
+  const markup = `
+          <div class="col-4">
+          <div class="row">
+            <div class="col-4 g-0">
+              <img width="100%" src="./assets/${img}" alt="">
+            </div>
+            <div class="col-8 d-flex flex-column justify-content-between">
+              <h4>${name}</h4>
+              <p>${role}</p>
+              <a href="">${email}</a>
+            </div>
+          </div>
+        </div>
+  `
+ return markup
+
+}
+
+
+// function to automatize markup function for all members
+function renderMemberCards (arr,domEl){
+  for (let i = 0; i < arr.length; i++) {
+    const element = arr[i];
+
+    const markup = getMembersCard(element)
+
+    domEl.innerHTML += markup
+    
+  }
+}
+
+
+
+// invoke function
+
+const renderTeam = renderMemberCards(teamMembers, cardEl)
