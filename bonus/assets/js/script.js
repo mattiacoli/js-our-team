@@ -127,4 +127,6 @@ formEl.addEventListener('submit', (e) =>{
   // add card in selected dom node
   cardEl.innerHTML += markup
 
+  formEl.reset()
+
 })

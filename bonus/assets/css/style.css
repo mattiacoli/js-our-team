@@ -43,3 +43,9 @@ section{
     }
   }
 }
+
+.btn-primary{
+  background-color: var(--ot-primary);
+  border-color: var(--ot-primary);
+  font-weight: 600;
+}
