@@ -1,0 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+ --ot-bg-lighter: #ffffff;
+ --ot-bg-darker: #000000;
+ --ot-primary: #e53170;
+ --ot-accent: #6ac9ec;
+}
