@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Team | Bonus</title>
+  <!-- Bootstrap CSS link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Style CSS-->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container text-center mx-auto my-5">
+        <h1 class="display-3 fw-bolder">Meet our Team</h1>
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque architecto hic ad facilis.
+          Doloremque, quis commodi quos maxime quasi nisi. Rem, commodi nemo cumque tenetur sint quam ad veritatis!</p>
+      </div>
+    </div>
+
+    <!-- Memebers Cards -->
+    <section id="members-card" class="container mt-3">
+
+      <div id="card-section" class="row g-5 justify-content-between gy-5"></div>
+    </section>
+
+    <!-- Form section -->
+    <div class="card mt-4 p-4">
+      <div class="card-title">
+        <h2>Join the Team</h2>
+      </div>
+      <form>
+        <!-- Name -->
+        <div class="mb-3">
+          <label for="exampleInputname1" class="form-label">Name and Lastname</label>
+          <input type="name" class="form-control" id="exampleInputname1" aria-describedby="nameHelp"
+            placeholder="Mario Rossi">
+          <div id="nameHelp" class="form-text">Type your name and lastname</div>
+        </div>
+
+        <!-- Role -->
+        <div class="mb-3">
+          <label for="exampleInputrole1" class="form-label">Role</label>
+          <input type="role" class="form-control" id="exampleInputrole1" aria-describedby="roleHelp"
+            placeholder="es. Developer">
+          <div id="roleHelp" class="form-text">Type your role</div>
+        </div>
+
+        <!-- email -->
+        <div class="form-group">
+          <label for="mail"><i class="fas fa-mail-bulk    "></i></label>
+          <input type="text" class="form-control" name="mail" id="mail" aria-describedby="mailId"
+            placeholder="mariorossi@mail.com">
+          <small id="mailId" class="form-text text-muted">Type your mail</small>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary mt-3">Join</button>
+      </form>
+    </div>
+
+
+  </div>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
