@@ -65,7 +65,7 @@ function getMembersCard(membersObj) {
               <img width="100%" src="${img}" alt="">
             </div>
             <div class="col-8  bg-black d-flex flex-column justify-content-center ">
-              <h4>${name}</h4>
+              <h4 class="fw-bolder fs-3">${name}</h4>
               <p>${role}</p>
               <a href="" class="text-decoration-none">${email}</a>
             </div>
